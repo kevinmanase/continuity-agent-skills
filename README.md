@@ -10,7 +10,27 @@ Install the Continuity skill into your agent with the open `skills` CLI:
 npx skills add kevinmanase/continuity-agent-skills --skill continuity --agent codex
 ```
 
-Replace `codex` with your agent name when needed, or use `--agent '*'` for every supported agent.
+Replace `codex` with your agent name when needed.
+
+Install into multiple agents by listing them after `--agent`:
+
+```bash
+npx skills add kevinmanase/continuity-agent-skills \
+  --skill continuity \
+  --agent codex claude-code cursor
+```
+
+Install into every supported agent with `'*'` quoted so your shell does not expand it:
+
+```bash
+npx skills add kevinmanase/continuity-agent-skills --skill continuity --agent '*'
+```
+
+Install every skill in this package into every supported agent:
+
+```bash
+npx skills add kevinmanase/continuity-agent-skills --all
+```
 
 ## Configure Continuity
 
